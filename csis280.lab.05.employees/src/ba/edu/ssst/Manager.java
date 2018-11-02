@@ -13,6 +13,10 @@ public class Manager implements IEmployee {
         this.yearsOfExp = yearsOfExp;
     }
 
+    private double getBonus() {
+        return this.yearsOfExp * 300;
+    }
+
     @Override
     public double getSalary() {
         return this.salary;
@@ -20,7 +24,7 @@ public class Manager implements IEmployee {
 
     @Override
     public double getEarnings() {
-        return this.getSalary() + (this.yearsOfExp * 300);
+        return this.getSalary() + this.getBonus();
     }
 
     @Override

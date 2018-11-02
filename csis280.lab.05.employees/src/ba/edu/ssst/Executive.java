@@ -13,6 +13,10 @@ public class Executive implements IEmployee {
         this.freeDays= 0;
     }
 
+    private double getBonus() {
+        return this.numberOfEmployees * 500;
+    }
+
     @Override
     public double getSalary() {
         return this.salary;
@@ -20,7 +24,7 @@ public class Executive implements IEmployee {
 
     @Override
     public double getEarnings() {
-        return this.getSalary() + (this.numberOfEmployees * 500);
+        return this.getSalary() + this.getBonus();
     }
 
     @Override

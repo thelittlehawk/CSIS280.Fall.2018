@@ -19,14 +19,14 @@ public class Main {
 
         employees.add(new Executive(30));
 
-        // Avarage salary
+        // Average salary
         double totalSalary = 0;
         for (IEmployee e : employees) {
             totalSalary += e.getSalary();
         }
-        System.out.println("Avarage salary : " + totalSalary / employees.size());
+        System.out.println("Average salary : " + totalSalary / employees.size());
 
-        // Avarage manager salary
+        // Average manager salary
         double totalManagerSalary = 0;
         int numberOfManagers = 0;
         for (IEmployee e : employees) {
@@ -35,7 +35,7 @@ public class Main {
                 numberOfManagers++;
             }
         }
-        System.out.println("Avarage salary : " + totalManagerSalary / numberOfManagers);
+        System.out.println("Average salary : " + totalManagerSalary / numberOfManagers);
 
         double min = employees.get(0).getEarnings();
         for (IEmployee e : employees) {
