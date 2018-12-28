@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JAVA API Test</title>
+</head>
+<body>
+    <h1>JAVA API Test web</h1>
+    <h2 id="serverReponse"></h2>
+    <h2>Year: <span id="year"></span></h2>
+    <script>
+        console.log("Test if it works!");
+        fetch("http://localhost:4567/hello")
+          .then(response => response.json())
+          .then(json => {
+          	document.getElementById("serverReponse").innerText = json.organisation;
+            document.getElementById("year").innerText = json.year;
+            json.students.map(x => console.log(x));
+        });
+    </script>
+</body>
+</html>
